@@ -12,11 +12,39 @@
                                </div>
                                
                                <!-- Sidebar latest videos header -->
-                               <h2 class="text-uppercase et-sidebar-title"><?php echo et_section_title("video"); ?></h2>
+                               <h2 class="text-uppercase et-sidebar-title">
+                               <?php 
+                               if( $_GET["type"] == "video" )
+                               {
+                                echo et_section_title("news");
+                               }
+                               else if( $_GET["type"] == "news" )
+                               {
+                                echo et_section_title("mem");
+                               }
+                               else if( $_GET["type"] == "mem" )
+                               {
+                                echo et_section_title("video");
+                               }
+                               ?>
+                               </h2>
                                
                
                                <?php 
-                                   et_panel_last_posts( "video", 5 );
+                               if( $_GET["type"] == "video" )
+                               {
+                                et_panel_last_posts( "news", 5 );
+                               }
+                               else if( $_GET["type"] == "news" )
+                               {
+                                et_panel_last_posts( "mem", 5 );
+                               }
+                               else if( $_GET["type"] == "mem" )
+                               {
+                                et_panel_last_posts( "video", 5 );
+                               }
+                            
+
                                ?>
                                   
                                <!-- Horizontal ad -->                       

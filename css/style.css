@@ -493,3 +493,20 @@ a:hover {
 .et-history-memes:hover, .et-history-memes-active{
     color: #f04e00;
 }
+
+
+
+
+
+
+
+
+
+
+/*r - fix*/
+.et-card-link{
+    z-index: 100;
+}
+#primary{
+    padding: 10vh;
+}

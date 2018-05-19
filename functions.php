@@ -1,6 +1,6 @@
 <?php 
 
-
+require_once('config.php');
 require_once('inc/functions-theme.php');
  
 
@@ -9,7 +9,7 @@ function et_enqueue()
 	wp_enqueue_style('bootstrap', get_bloginfo('template_url') . '/css/bootstrap.css');
 	wp_enqueue_style('etstyle', get_bloginfo('template_url') . '/css/style.css');
 	
-	wp_enqueue_script( 'scripts_js', get_bloginfo('template_url') . '/js/scripts.js', array('jquery'), true , true );
+	//wp_enqueue_script( 'scripts_js', get_bloginfo('template_url') . '/js/scripts.js', array('jquery'), true , true );
 	wp_localize_script( 'scripts_js', 'myAjax', array( 'ajaxurl' => admin_url( 'admin-ajax.php' )));  
 }
 add_action('wp_enqueue_scripts','et_enqueue');
@@ -26,7 +26,8 @@ function theme_menu() {
 	register_nav_menus( array(
 		'primary' => __( 'Primary Navigation', 'et2' ),
         'meta' => __( 'Meta Menu', 'et2' ), 
-        'social' => __( 'Social Links', 'et2' ),
+		'social' => __( 'Social Links', 'et2' ),
+		'etheader' => __( 'Top menu', 'et2' ),
 	) );
 }
 add_action( 'after_setup_theme', 'theme_menu' );
