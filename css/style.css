@@ -497,8 +497,12 @@ a:hover {
 
 
 
-
-
+.panel-a{
+    color: #2196F3;
+}
+.panel-a:hover{
+    color: #3F51B5;
+}
 
 
 
@@ -510,3 +514,25 @@ a:hover {
 #primary{
     padding: 10vh;
 }
+
+#panel .acf-form .acf-field{
+    margin: 20px auto 30px;
+}
+#panel .acf-form .acf-field input[type=text]{
+    border: 0;
+    border-radius: 10px;
+    padding: 5px 10px;
+    width: 100%;
+    max-width: 500px;
+}
+
+
+#panel .acf-form .acf-taxonomy-field ul{
+    padding-left: 0;
+}
+#panel .acf-form .acf-taxonomy-field ul li{
+    list-style: none;
+    padding-left: 10px;
+}
+
+

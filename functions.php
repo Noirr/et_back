@@ -153,4 +153,50 @@ function et_custom_posts()
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+/*
+
+//custom wrong password page
+function site_login_fail( $username ) {
+	$referrer = $_SERVER['HTTP_REFERER'];
+	if ( !empty($referrer) && !strstr($referrer,'wp-login') && !strstr($referrer,'wp-admin') ) {
+	  wp_redirect( $referrer . '?error' );
+	  exit;
+	}
+  }
+  add_action( 'wp_login_failed', 'site_login_fail' );  // hook failed login
+  
+  //redirect non-admin users from wp-admin to home
+  function site_redirect_non_admin_users() {
+	$current_user = wp_get_current_user();
+	  if ( $current_user->user_login !== 'admin' &&
+	  '/wp-admin/admin-ajax.php' != $_SERVER['PHP_SELF'] ) {
+			wp_redirect( get_bloginfo('url') );
+			exit;
+	  }
+  }
+  add_action( 'admin_init', 'site_redirect_non_admin_users' );
+  
+  //redrecting wp-login.php
+  function site_custom_login() {
+	global $pagenow;
+	if ( 'wp-login.php' == $pagenow && !isset( $_POST['redirect_to'] ) &&
+	  !isset( $_GET['action'] ) && $_GET['action'] != 'logout' ) {
+		wp_redirect( get_bloginfo('url') );
+		exit();
+	}
+  }
+  add_action( 'init', 'site_custom_login' );
+*/
+
 ?>

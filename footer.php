@@ -1,94 +1,28 @@
-
-    
-
-
-
-
-
-    <!-- ####### Footer ####### -->
-    <footer class="et-footer">
-        <div class="container px-xl-0">
-            <div class="row">
-                
-                <div class="col-md-3">
-                    
-                    <!-- Footer menu -->
-                    <ul class="nav flex-column text-uppercase">
-                       
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Newsy</a>
-                            
-                            <ul class="et-footer-submenu-link">
-                                <li class="nav-item"><a class="nav-link" href="#" >Newsy</a></li>
-                                <li class="nav-item"><a class="nav-link" href="#" >Artykuły</a></li>
-                                <li class="nav-item"><a class="nav-link" href="#" >Wywiady</a></li>
-                                <li class="nav-item"><a class="nav-link" href="#" >Felietony</a></li>
-                            </ul>
-                            
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Memy</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Video</a>
-                        </li>
-
-                    </ul>
-                    
-                </div>
-                
-                <div class="col-md-3">
-                    
-                    <!-- Footer menu with info pages -->
-                    <ul class="nav flex-column text-uppercase">
-                       
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Redakcja</a>       
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Reklama</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Polityka prywatności</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Kontakt</a>
-                        </li>
-
-                    </ul>
-                    
-                </div>
-                
-                <div class="col-md-3">
-                    
-                    <!-- Socials -->
-                    <div class="et-social">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="far fa-envelope"></i></a>
-                    </div>
-                    
-                    <!-- Copy -->
-                    <div class="et-copy">
-                        <p>&copy; 2018 Ekstraklasa Trolls<br />
-                        Wszelkie prawa zastrzeżone.<br /><br />
-                        Realizacja: <a href="https://kompromix.pl/" target="_blank">kompromix</a></p>
-                    </div>
-                    
-                </div>
-                
-            </div>
-        </div>
-    </footer>    
-    <!-- ####### End of Footer ####### -->    
-    
-    <!-- Javascript -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    
-    <?php wp_footer(); ?>
-
 </body>
+<!--   Core JS Files   -->
+<script src="<?php echo bloginfo("template_url"); ?>/assets/js/core/jquery.3.2.1.min.js" type="text/javascript"></script>
+<script src="<?php echo bloginfo("template_url"); ?>/assets/js/core/popper.min.js" type="text/javascript"></script>
+<script src="<?php echo bloginfo("template_url"); ?>/assets/js/core/bootstrap.min.js" type="text/javascript"></script>
+<!--  Plugin for Switches, full documentation here: http://www.jque.re/plugins/version3/bootstrap.switch/ -->
+<script src="<?php echo bloginfo("template_url"); ?>/assets/js/plugins/bootstrap-switch.js"></script>
+<!--  Google Maps Plugin    -->
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
+<!--  Chartist Plugin  -->
+<script src="<?php echo bloginfo("template_url"); ?>/assets/js/plugins/chartist.min.js"></script>
+<!--  Notifications Plugin    -->
+<script src="<?php echo bloginfo("template_url"); ?>/assets/js/plugins/bootstrap-notify.js"></script>
+<!-- Control Center for Light Bootstrap Dashboard: scripts for the example pages etc -->
+<script src="<?php echo bloginfo("template_url"); ?>/assets/js/light-bootstrap-dashboard.js?v=2.0.1" type="text/javascript"></script>
+<!-- Light Bootstrap Dashboard DEMO methods, don't include it in your project! -->
+<script src="<?php echo bloginfo("template_url"); ?>/assets/js/demo.js"></script>
+<script type="text/javascript">
+    jQuery(document).ready(function() {
+        // Javascript method's body can be found in assets/js/demos.js
+        demo.initDashboardPageCharts();
+
+        //demo.showNotification();
+
+    });
+</script>
+
 </html>
